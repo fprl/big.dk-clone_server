@@ -6788,15 +6788,10 @@
   dependencies:
     "semver" "^5.4.1"
 
-"node-addon-api@^3.1.0":
+"node-addon-api@^3.0.0", "node-addon-api@^3.1.0":
   "integrity" "sha512-kcwSAWhPi4+QzAtsL2+2s/awvDo2GKLsvMCwNRxb5BUshteXU8U97NCyvQDsGKs/m0He9WcG4YWew/BnuLx++w=="
   "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-3.2.0.tgz"
   "version" "3.2.0"
-
-"node-addon-api@2.0.0":
-  "integrity" "sha512-ASCL5U13as7HhOExbT6OlWJJUV/lLzL2voOSP1UVehpRD8FbSrSDjfScK/KwAvVTI5AS6r4VwbOMlIqtvRidnA=="
-  "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-2.0.0.tgz"
-  "version" "2.0.0"
 
 "node-fetch@^2.6.1", "node-fetch@2.6.1":
   "integrity" "sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw=="
@@ -7484,7 +7479,7 @@
     "postgres-date" "~1.0.4"
     "postgres-interval" "^1.1.0"
 
-"pg@^8.3.0", "pg@>=8.0":
+"pg@^8.3.0", "pg@^8.6.0", "pg@>=8.0":
   "integrity" "sha512-qNS9u61lqljTDFvmk/N66EeGq3n6Ujzj0FFyNMGQr6XuEv4tgNTXvJQTfJdcvGit5p5/DWPu+wj920hAJFI+QQ=="
   "resolved" "https://registry.npmjs.org/pg/-/pg-8.6.0.tgz"
   "version" "8.6.0"
@@ -9370,12 +9365,12 @@
   "resolved" "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.2.tgz"
   "version" "1.1.2"
 
-"sqlite3@^5.0.0", "sqlite3@5.0.0":
-  "integrity" "sha512-rjvqHFUaSGnzxDy2AHCwhHy6Zp6MNJzCPGYju4kD8yi6bze4d1/zMTg6C7JI49b7/EM7jKMTvyfN/4ylBKdwfw=="
-  "resolved" "https://registry.npmjs.org/sqlite3/-/sqlite3-5.0.0.tgz"
-  "version" "5.0.0"
+"sqlite3@^5.0.0", "sqlite3@^5.0.2":
+  "integrity" "sha512-1SdTNo+BVU211Xj1csWa8lV6KM0CtucDwRyA0VHl91wEH1Mgh7RxUpI4rVvG7OhHrzCSGaVyW5g8vKvlrk9DJA=="
+  "resolved" "https://registry.npmjs.org/sqlite3/-/sqlite3-5.0.2.tgz"
+  "version" "5.0.2"
   dependencies:
-    "node-addon-api" "2.0.0"
+    "node-addon-api" "^3.0.0"
     "node-pre-gyp" "^0.11.0"
   optionalDependencies:
     "node-gyp" "3.x"
