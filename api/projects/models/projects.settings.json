@@ -43,7 +43,7 @@
       "required": true,
       "pluginOptions": {}
     },
-    "featuredMedia": {
+    "media": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -52,7 +52,7 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true,
+      "required": false,
       "pluginOptions": {}
     },
     "programmatic": {
@@ -60,9 +60,9 @@
       "enum": [
         "commercial",
         "urbanism",
-        "publicspace",
+        "publicSpace",
         "culture",
-        "bodyculture",
+        "bodyCulture",
         "health",
         "education",
         "housing",
@@ -83,6 +83,80 @@
     "slug": {
       "type": "string",
       "required": true
+    },
+    "alphabetical": {
+      "type": "string",
+      "required": true,
+      "maxLength": 1
+    },
+    "scale": {
+      "type": "biginteger",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "competition",
+        "commission"
+      ],
+      "required": true,
+      "default": "commission"
+    },
+    "client": {
+      "type": "string",
+      "required": false,
+      "default": "Bjarke Ingels Group"
+    },
+    "collaborators": {
+      "type": "text",
+      "required": false,
+      "default": "HB Trapper <construction>, Afry <structural ing>"
+    },
+    "partners": {
+      "type": "string",
+      "required": false,
+      "default": "Bjarke Ingels, Jakob Lange"
+    },
+    "leaders": {
+      "type": "string",
+      "required": false,
+      "default": "Tobias Hjortdal"
+    },
+    "team": {
+      "type": "text",
+      "required": false,
+      "default": "Matilda Blomgren, Annette Jensen, Erik Kreider, Joshua Woo, Federico Martinez De Sola, Stefan Plugaru"
+    },
+    "description": {
+      "type": "richtext",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend fringilla justo vel ornare. Donec tempus commodo nisl, quis vestibulum erat. Donec ornare magna at lectus congue, a rhoncus dolor scelerisque. Donec et augue elementum, auctor leo non, aliquam felis. Pellentesque volutpat ligula ipsum, eget pulvinar erat cursus at. Nunc finibus neque est, vitae consequat ipsum accumsan quis. Vestibulum sodales lorem nec ante cursus pretium. Donec in lacinia neque, bibendum pulvinar nisl. Proin ac purus sed sapien mattis tempus. Maecenas felis ligula, facilisis ac arcu nec, vulputate tempus magna. Ut ac egestas lectus. Ut in ornare est, vitae tristique est. Phasellus facilisis varius diam, eget pharetra turpis fermentum at. Nunc a sem vel nulla dictum porta dapibus eu metus.  Vestibulum finibus hendrerit felis, vel mattis ipsum lacinia non. Nam ac metus eu urna consectetur imperdiet et at sapien. In vel arcu sem. Integer iaculis consequat quam, ac malesuada elit molestie eu. Aenean gravida vitae turpis sit amet aliquam. Vestibulum viverra lacus a odio feugiat, et condimentum risus iaculis. Cras placerat fringilla elementum. Proin ultrices, est a finibus hendrerit, nisi leo gravida lorem, non fermentum elit magna non est. Curabitur id felis sollicitudin odio congue tempus.  Maecenas euismod mollis sagittis. Etiam ultrices condimentum ultrices. Donec nulla metus, dictum at justo vitae, tempus lacinia orci. Ut maximus nisi risus, in hendrerit odio maximus ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ornare sem massa, sed tempus enim accumsan non. Donec molestie, dolor vitae sodales elementum, ipsum enim hendrerit justo, et venenatis ex augue nec diam. Curabitur enim tortor, tempor eget sodales non, suscipit sit amet eros. Nullam eleifend diam sem, a ullamcorper arcu accumsan sed. Sed eget placerat purus. Nullam bibendum id turpis at lacinia. Maecenas non quam est. Suspendisse ultrices magna est, ac commodo ipsum mattis ut. Mauris in urna dapibus purus sollicitudin porttitor. Nullam justo magna, pretium nec metus a, gravida dignissim felis."
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "featured": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "iconPreview": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
