@@ -1,6 +1,7 @@
 "use strict";
 const slugify = require("slugify");
-const utilities = require("../utilities/getScaleBySize");
+const { getScaleBySize } = require("../utilities/getScaleBySize");
+const { getAlphabetical } = require("../utilities/getAlphabetical");
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#lifecycle-hooks)
@@ -14,17 +15,10 @@ module.exports = {
         data.slug = slugify(data.title, { lower: true });
       }
       if (data.shortTitle) {
-        const firstLetter = data.shortTitle[0];
-        if (typeof firstLetter === "number") {
-          data.alphabetical = "#";
-        } else if (firstLetter === "x" || "w" || "z") {
-          data.alphabetical = "xwz";
-        } else {
-          data.alphabetical = data.shortTitle[0].toLowerCase();
-        }
+        data.alphabetical = getAlphabetical(data.shortTitle)
       }
       if (data.size) {
-        data.scale = utilities.getScaleBySize(data.size);
+        data.scale = getScaleBySize(data.size);
       }
     },
     async beforeUpdate(params, data) {
@@ -32,17 +26,10 @@ module.exports = {
         data.slug = slugify(data.title, { lower: true });
       }
       if (data.shortTitle) {
-        const firstLetter = data.shortTitle[0];
-        if (typeof firstLetter === "number") {
-          data.alphabetical = "#";
-        } else if (firstLetter === "x" || "w" || "z") {
-          data.alphabetical = "xwz";
-        } else {
-          data.alphabetical = data.shortTitle[0].toLowerCase();
-        }
+        data.alphabetical = getAlphabetical(data.shortTitle)
       }
       if (data.size) {
-        data.scale = utilities.getScaleBySize(data.size);
+        data.scale = getScaleBySize(data.size);
       }
     },
   },

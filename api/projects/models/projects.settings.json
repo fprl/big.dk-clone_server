@@ -86,8 +86,7 @@
     },
     "alphabetical": {
       "type": "string",
-      "required": true,
-      "maxLength": 1
+      "required": true
     },
     "scale": {
       "type": "biginteger",
