@@ -12,7 +12,16 @@ module.exports = {
     async beforeCreate(data) {
       if (data.title) {
         data.slug = slugify(data.title, { lower: true });
-        data.alphabetical = data.shortTitle[0].toLowerCase();
+      }
+      if (data.shortTitle) {
+        const firstLetter = data.shortTitle[0];
+        if (typeof firstLetter === "number") {
+          data.alphabetical = "#";
+        } else if (firstLetter === "x" || "w" || "z") {
+          data.alphabetical = "xwz";
+        } else {
+          data.alphabetical = data.shortTitle[0].toLowerCase();
+        }
       }
       if (data.size) {
         data.scale = utilities.getScaleBySize(data.size);
@@ -21,7 +30,16 @@ module.exports = {
     async beforeUpdate(params, data) {
       if (data.title) {
         data.slug = slugify(data.title, { lower: true });
-        data.alphabetical = data.shortTitle[0].toLowerCase();
+      }
+      if (data.shortTitle) {
+        const firstLetter = data.shortTitle[0];
+        if (typeof firstLetter === "number") {
+          data.alphabetical = "#";
+        } else if (firstLetter === "x" || "w" || "z") {
+          data.alphabetical = "xwz";
+        } else {
+          data.alphabetical = data.shortTitle[0].toLowerCase();
+        }
       }
       if (data.size) {
         data.scale = utilities.getScaleBySize(data.size);
